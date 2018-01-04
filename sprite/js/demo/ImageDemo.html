@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>img.dragonfly.ai Demo</title>
+    <script type="text/javascript" src="../target/scala-2.12/sprite-fastopt.js"></script>
+</head>
+<body style="background-color: #000000;">
+<!-- canvas id="testCanvas01" width="800" height="800" style="position: absolute; top: 400px; left: 400px;"></canvas -->
+<script type="text/javascript">
+var body = document.getElementsByTagName("body")[0];
+ai.dragonfly.distributed.Snowflake().ready(
+  function(){
+    var imgOps = ImageOperations();
+
+    var img1 = ai.dragonfly.img.Img(1920, 1080);
+    imgOps.randomizeRGB(img1);
+
+    var idu = ai.dragonfly.img.ImgDOMUtils();
+
+    var imgRepo = ai.dragonfly.img.sprite.LoadedImgRepository()
+
+
+});
+</script>
+</body>
+</html>
